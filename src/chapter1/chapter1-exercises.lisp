@@ -44,6 +44,26 @@
   ;;; average of two numbers
   (/ (+ x y) 2))
 
-(defun more-than-half-p (x y);;; create a function that verify whether
+(defun more-than-half-p (x y) ;;; create a function that verify whether
   ;;; x is more than half than y
   (equal x (add1 (m-average x y))))
+
+(defun not-equal-p (x y) ;;; create a function that return the negation of
+  ;;; equal results
+  (not
+   (equal x y)))
+
+(defun onep (x) ;;; create a function that returns T if x == 1
+  (equal x 1))
+
+(defun notonep (x) ;;; create a function that returns T if x != 1
+  (not
+   (onep x)))
+
+(defun not-plusp (x) ;;; create a function that return NIL if
+  ;;; x is > 0
+  (not
+   (plusp x)))
+
+(defun xorp (x y) ;;; create an exclusive-or function
+  (or (and x (not y)) (and (not x) y)))
