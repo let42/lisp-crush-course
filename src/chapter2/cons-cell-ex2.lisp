@@ -16,4 +16,40 @@
 	NIL))))
 
 ;;; It possible that
-'()
+(list 'ALIMENTI '(PANE PASTA CARNE) 'ABBIGLIAMENTO '(MAGLIA PANTALONI SCARPE) 'ACCESSORI '(PC SMARTPHONE TABLET))
+
+(defparameter elementi-quotidiani
+  (cons 'ABBIGLIAMENTO
+	(cons
+	 (cons 'MAGLIA
+	       (cons 'GIACCA
+		     (cons 'CAPPOTTO 'NIL)))
+	 (cons 'UFFICIO
+	       (cons
+		(cons 'PC
+		      (cons 'DOCUMENTI
+			    (cons 'CLIENTI 'NIL)))
+		(cons 'ALIMENTI
+		      (cons
+		       (cons 'PANE
+			     (cons 'PASTA
+				   (cons 'RAGU 'NIL)))
+		       'NIL)))))))
+
+(defparameter altri-elementi-quotidiani
+   (cons 'ALIMENTI
+	       (cons 
+		(cons 'PANE
+		      (cons 'PASTA
+			    (cons 'CARNE 'NIL)))
+		(cons 'ABBIGLIAMENTO
+		      (cons
+		       (cons 'MAGLIA
+			     (cons 'PANTALONI
+				   (cons 'SCARPE 'NIL)))
+		       (cons 'ACCESSORI
+			     (cons
+			      (cons 'PC
+				    (cons 'SMARTPHONE
+					  (cons 'TABLET 'NIL)))
+			      'NIL)))))))
